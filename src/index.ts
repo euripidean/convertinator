@@ -17,6 +17,9 @@ class Convert {
   convertedValue: number;
 
   constructor(value: number, conversionType: ConversionType) {
+    if (isNaN(value)) {
+      throw new Error("Invalid value. Enter a number.");
+    }
     this.value = value;
     if (!Object.values(ConversionType).includes(conversionType)) {
       throw new Error(`Invalid conversion type: ${conversionType}`);
