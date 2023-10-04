@@ -20,6 +20,24 @@ describe("Check constructor", () => {
   });
 });
 
+describe("Check getters and setters", () => {
+  test("Check getValue", () => {
+    const convert = new Convert(1, "CF");
+    expect(convert.getValue()).toBe(1);
+  });
+
+  test("Check setValue", () => {
+    const convert = new Convert(1, "CF");
+    convert.setValue(2);
+    expect(convert.getValue()).toBe(2);
+  });
+
+  test("Check getConversionType", () => {
+    const convert = new Convert(1, "CF");
+    expect(convert.getConversionType()).toBe("CF");
+  });
+});
+
 describe("Check temperature conversions", () => {
   test("Check conversion from Celsius to Fahrenheit", () => {
     const convert = new Convert(1, "CF");

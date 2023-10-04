@@ -1,8 +1,8 @@
 {
-  "name": "src",
+  "name": "@euripidean/convertinator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Converts temperatures, distance, weight, and volume",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack --config webpack.config.js"
